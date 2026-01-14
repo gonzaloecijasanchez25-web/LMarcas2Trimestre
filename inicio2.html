@@ -1,0 +1,24 @@
+<script>
+    var nombre = prompt("Introduzca su nombre: ")
+    alert("Hola " + nombre + " !!!") 
+    let nota1 = parseFloat(prompt("Primera nota: "))
+    let nota2 = parseFloat(prompt("Segunda nota: "))
+    let nota3 = parseFloat(prompt("Tercera nota: "))
+
+    let media = (nota1 + nota2 + nota3) / 3
+    alert ("Hola " + nombre + " tu media es " + media )
+
+    let resultado
+    if (media < 5){
+        mensaje = "Has suspendido :(";
+    }
+    else if (media < 7 && media >= 5) {  // ← AQUÍ ESTABA EL ERROR
+        mensaje = "Aprobado, enhorabuena!!";
+    }
+    else if (media < 9) {
+        mensaje = "Notable, ¡muy bien!";
+    }
+    else {
+        mensaje = "Sobresaliente, ¡eres un titan!!!";
+    } 
+</script>

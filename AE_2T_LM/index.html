@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opinión Princesa Mononoke</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="caja-titulo">
+    Opinión Princesa Mononoke
+  </div>
+  <div class="caja-articulo">
+
+    <img class="fotoPeli" src="img/logomononoke.png" alt="logo">
+
+    <h3 id="tituloArticulo">Opinión Princesa Mononoke</h3>
+
+    <p id="parrafoArticulo">
+      Princesa Mononoke es mi pelicula favorita la magia que transmite y lo buena que es no tiene sentido megadab
+    </p>
+
+    <p class="autor-fecha" id="autorFecha">
+      Autor: Gonzi · Fecha: 11/12/2025
+    </p>
+  </div>
+
+  <div class="fila-nuevo-texto">
+    <button id="btnNuevoTexto" class="btn-nuevo">
+      nuevo texto
+    </button>
+    <div class="caja-input">
+      <p class="mini-titulo">texto en sí</p>
+
+      <label for="inputTitulo">Título:</label>
+      <input type="text" id="inputTitulo" placeholder="Ej: Opinión Princesa Mononoke">
+
+      <label for="inputTexto">Opinión:</label>
+      <textarea id="inputTexto" rows="5" placeholder="Escribe aquí tu opinión..."></textarea>
+
+      <label for="inputAutor">Autor:</label>
+      <input type="text" id="inputAutor" placeholder="Tu nombre">
+
+      <label for="inputFecha">Fecha:</label>
+      <input type="text" id="inputFecha" placeholder="10/02/2026">
+    </div>
+
+  </div>
+
+  <div class="fila-selectores">
+
+    <div class="selector">
+      <label for="selectColor">selector de color</label>
+      <select id="selectColor">
+        <option value="black" selected>Negro</option>
+        <option value="red">Rojo</option>
+        <option value="blue">Azul</option>
+        <option value="green">Verde</option>
+      </select>
+    </div>
+
+    <div class="selector">
+      <label for="selectTam">tamaño texto</label>
+      <select id="selectTam">
+        <option value="14px">14px</option>
+        <option value="18px" selected>18px</option>
+        <option value="22px">22px</option>
+        <option value="26px">26px</option>
+      </select>
+    </div>
+
+  </div>
+  <p class="etiqueta-carrusel">carrusel de foto</p>
+  <div class="carousel">
+    <div class="carousel-container">
+      <img src="img/imgmononoke1.jpg" class="carousel-item active" alt="Imagen 1">
+      <img src="img/imgmononoke2.jpg" class="carousel-item" alt="Imagen 2">
+      <img src="img/imgmononoke3.jpg" class="carousel-item" alt="Imagen 3">
+      <img src="img/imgmononoke4.jpg" class="carousel-item" alt="Imagen 4">
+      <img src="img/imgmononoke5.jpg" class="carousel-item" alt="Imagen 5">
+
+    </div>
+    <button class="prev" onclick="prevSlide()">&#10094;</button>
+    <button class="next" onclick="nextSlide()">&#10095;</button>
+    <div class="indicators"></div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

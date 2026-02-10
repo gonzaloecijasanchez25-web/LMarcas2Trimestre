@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #ffcc80;
+    padding: 15px;
+}
+
+.logo {
+    width: 60px;
+}
+
+.intro {
+    padding: 20px;
+    background-color: white;
+}
+
+.carousel {
+    position: relative;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.carousel img {
+    width: 100%;
+    display: none;
+    border-radius: 8px;
+}
+
+.carousel img.active {
+    display: block;
+}
+
+.carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#prev {
+    left: 5px;
+}
+
+#next {
+    right: 5px;
+}
+
+form {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.style-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#recipeOutput {
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+}

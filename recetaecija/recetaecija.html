@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Generador de Recetas</title>
+    <link rel="stylesheet" href="stylecija.css">
+</head>
+<body>
+
+    <header>
+        <img src="https://img.pikbest.com/png-images/20241030/chefs-delight-restaurant-logo_11024933.png!sw800" alt="Logo recetas" class="logo">
+        <h1>Generador de Recetas 🍳</h1>
+    </header>
+
+    <section class="intro">
+        <p>
+            Esta aplicación permite crear recetas de cocina de forma sencilla,
+            introduciendo ingredientes y pasos de preparación. La receta se
+            genera automáticamente y puede personalizarse visualmente.
+        </p>
+    </section>
+
+    <section class="carousel">
+        <img src="https://imagenes.heraldo.es/files/image_1920_1080/uploads/imagenes/2020/05/05/saray-y-su-perdiz-provocan-la-ira-del-jurado-de-masterchef-y-la-audiencia.png" class="active">
+        <img src="https://estaticos-cdn.prensaiberica.es/clip/c936f58c-f1d8-443c-8972-4fbcaf252441_16-9-aspect-ratio_default_0.jpg">
+        <img src="https://www.huleymantel.com/uploads/s1/43/50/33/laia-2023-07-31t181057-900.webp">
+        <img src="https://images.ecestaticos.com/nmwKArtDbUyM-MZpIyrPv1ubSiM=/0x75:799x524/1600x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2F310%2Fd19%2Fd69%2F310d19d69f76f0182d7bcce3d4d90ca8.jpg">
+        <img src="https://i.blogs.es/f0f5b7/marshall-20astor/650_1200.jpg">
+
+        <button id="prev">◀</button>
+        <button id="next">▶</button>
+    </section>
+
+    <form id="recipeForm">
+        <label>Nombre de la receta:</label>
+        <input type="text" id="name" required>
+
+        <label>Tiempo de preparación (minutos):</label>
+        <input type="number" id="time" required>
+
+        <label>Ingredientes (uno por línea):</label>
+        <textarea id="ingredients" rows="5" required></textarea>
+
+        <label>Pasos de preparación (uno por línea):</label>
+        <textarea id="steps" rows="5" required></textarea>
+
+        <button type="submit">Generar receta</button>
+    </form>
+
+    <div class="style-buttons">
+        <button onclick="changeTextColor()">Color del texto</button>
+        <button onclick="changeTextSize()">Tamaño del texto</button>
+        <button onclick="changeBackground()">Color de fondo</button>
+    </div>
+
+    <div id="recipeOutput"></div>
+
+    <script src="scrptecija.js"></script>
+</body>
+</html>

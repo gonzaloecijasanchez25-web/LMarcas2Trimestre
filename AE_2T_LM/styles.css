@@ -1,0 +1,203 @@
+* { 
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 30px 10px;
+  gap: 18px;
+}
+
+/* CAJA TÍTULO */
+.caja-titulo {
+  background: #fff;
+  padding: 10px 18px;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* CAJA ARTÍCULO */
+.caja-articulo {
+  width: 80%;
+  max-width: 750px;
+  background: #fff;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.fotoPeli {
+  width: 100%;
+  max-height: 260px;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 12px;
+  border-radius: 8px;
+}
+
+#tituloArticulo {
+  margin-bottom: 10px;
+}
+
+#parrafoArticulo {
+  font-size: 18px;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.autor-fecha {
+  font-size: 14px;
+  color: #333;
+}
+
+/* FILA NUEVO TEXTO */
+.fila-nuevo-texto {
+  width: 80%;
+  max-width: 750px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.btn-nuevo {
+  background: #222;
+  color: #fff;
+  padding: 10px 14px;
+  cursor: pointer;
+  height: fit-content;
+  border: none;
+  border-radius: 6px;
+}
+
+.caja-input {
+  flex: 1;
+  background: #fff;
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+
+.mini-titulo {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 6px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  resize: vertical;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* FILA SELECTORES */
+.fila-selectores {
+  width: 80%;
+  max-width: 750px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.selector {
+  background: #fff;
+  padding: 12px;
+  width: 48%;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+
+select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Etiqueta “carrusel de foto” */
+.etiqueta-carrusel {
+  background: #fff;
+  padding: 8px 14px;
+  font-weight: bold;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+
+/* ===== CARRUSEL (se mantiene tal cual, ya era bonito) ===== */
+
+.carousel {
+  position: relative;
+  width: 80%;
+  max-width: 600px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  width: 100%;
+  display: none;
+}
+
+.carousel-item.active {
+  display: block;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.indicators div {
+  width: 12px;
+  height: 12px;
+  background-color: #bbb;
+  border-radius: 50%;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.indicators .active {
+  background-color: #333;
+}

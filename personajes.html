@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personajes de Videojuego</title>
+</head>
+<body>
+    <h1>Personajes de Videojuego</h1>
+    
+    <div id="personaje1">
+        <h2>Daenerys Targaryen</h2>
+        <img src="https://elcomercio.pe/resizer/_xqXG8N6h3ptVXASfwE_p9syq9Y=/1200x900/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/3SST7EZLDVEM7POHMJ5JT27HCU.jpg" width="200">
+        <p><strong>Vida:</strong> <span id="vida-daenerys">100</span></p>
+        <p><strong>Nivel:</strong> <span id="nivel-daenerys">1</span></p>
+        <button onclick="daenerys.atacar()">Atacar</button>
+        <button onclick="daenerys.recibirDaño(20)">Recibir Daño (20)</button>
+        <button onclick="daenerys.subirNivel()">Subir Nivel</button>
+        <p id="mensaje-daenerys"></p>
+    </div>
+
+    <hr>
+
+    <div id="personaje2">
+        <h2>Jon Snow</h2>
+        <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/06/game-of-thrones-jon-snow.jpg?w=1600&h=900&fit=crop" width="200">
+        <p><strong>Vida:</strong> <span id="vida-jon">100</span></p>
+        <p><strong>Nivel:</strong> <span id="nivel-jon">1</span></p>
+        <button onclick="jon.atacar()">Atacar</button>
+        <button onclick="jon.recibirDaño(20)">Recibir Daño (20)</button>
+        <button onclick="jon.subirNivel()">Subir Nivel</button>
+        <p id="mensaje-jon"></p>
+    </div>
+
+    <script>
+        class Personaje {
+            constructor(nombre, idVida, idNivel, idMensaje) {
+                this.nombre = nombre;
+                this.vida = 100;
+                this.nivel = 1;
+                this.idVida = idVida;
+                this.idNivel = idNivel;
+                this.idMensaje = idMensaje;
+            }
+
+            atacar() {
+                if (this.vida <= 0) {
+                    document.getElementById(this.idMensaje).innerHTML = this.nombre + " está muerto y no puede atacar!";
+                    return;
+                }
+                let mensaje = this.nombre + " está atacando!";
+                document.getElementById(this.idMensaje).innerHTML = mensaje;
+            }
+
+            recibirDaño(cantidad) {
+                if (this.vida <= 0) {
+                    document.getElementById(this.idMensaje).innerHTML = this.nombre + " ya está muerto!";
+                    return;
+                }
+                
+                this.vida = this.vida - cantidad;
+                
+                if (this.vida <= 0) {
+                    this.vida = 0;
+                    document.getElementById(this.idVida).innerHTML = this.vida;
+                    let mensaje = this.nombre + " ha muerto!";
+                    document.getElementById(this.idMensaje).innerHTML = mensaje;
+                } else {
+                    document.getElementById(this.idVida).innerHTML = this.vida;
+                    let mensaje = this.nombre + " recibió " + cantidad + " de daño. Vida actual: " + this.vida;
+                    document.getElementById(this.idMensaje).innerHTML = mensaje;
+                }
+            }
+
+            subirNivel() {
+                if (this.vida <= 0) {
+                    document.getElementById(this.idMensaje).innerHTML = this.nombre + " está muerto y no puede subir de nivel!";
+                    return;
+                }
+                
+                this.nivel = this.nivel + 1;
+                this.vida = this.vida + 10;
+                
+                document.getElementById(this.idNivel).innerHTML = this.nivel;
+                document.getElementById(this.idVida).innerHTML = this.vida;
+                
+                let mensaje = this.nombre + " subió al nivel " + this.nivel + "! Ganó 10 de vida. Vida actual: " + this.vida;
+                document.getElementById(this.idMensaje).innerHTML = mensaje;
+            }
+        }
+
+        let daenerys = new Personaje("Daenerys Targaryen", "vida-daenerys", "nivel-daenerys", "mensaje-daenerys");
+        let jon = new Personaje("Jon Snow", "vida-jon", "nivel-jon", "mensaje-jon");
+    </script>
+</body>
+</html>

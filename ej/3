@@ -1,0 +1,247 @@
+Perfecto, aquí van **20 mini-ejercicios tipo examen de funciones en JavaScript**. Hazlos primero tú en papel/mente y luego compara con la solución (te dejo **enunciado + solución** para cada uno). Nivel básico total, 100% de tus apuntes.
+
+---
+
+## 1️⃣ Mostrar un saludo
+
+**Enunciado:** Crea una función que muestre “Hola” en un `alert`.
+
+**Solución:**
+
+```js
+function saludar() {
+  alert("Hola");
+}
+```
+
+---
+
+## 2️⃣ Saludar con nombre
+
+**Enunciado:** Función que reciba un nombre y muestre “Hola, nombre”.
+
+**Solución:**
+
+```js
+function saludarNombre(nombre) {
+  alert("Hola, " + nombre);
+}
+```
+
+---
+
+## 3️⃣ Sumar dos números
+
+**Enunciado:** Función que devuelva la suma de dos números.
+
+**Solución:**
+
+```js
+function sumar(a, b) {
+  return a + b;
+}
+```
+
+---
+
+## 4️⃣ Restar dos números
+
+```js
+function restar(a, b) {
+  return a - b;
+}
+```
+
+---
+
+## 5️⃣ Decir si es mayor de edad
+
+```js
+function esMayorDeEdad(edad) {
+  if (edad >= 18) {
+    return true;
+  } else {
+    return false;
+  }
+}
+```
+
+---
+
+## 6️⃣ Cambiar texto de un elemento por id
+
+```js
+function cambiarTexto(id, texto) {
+  document.getElementById(id).textContent = texto;
+}
+```
+
+---
+
+## 7️⃣ Cambiar color de un elemento
+
+```js
+function cambiarColor(id, color) {
+  document.getElementById(id).style.color = color;
+}
+```
+
+---
+
+## 8️⃣ Mostrar por consola
+
+```js
+function mostrarConsola(texto) {
+  console.log(texto);
+}
+```
+
+---
+
+## 9️⃣ Pedir nombre al usuario
+
+```js
+function pedirNombre() {
+  let nombre = prompt("¿Cómo te llamas?");
+  alert("Hola, " + nombre);
+}
+```
+
+---
+
+## 🔟 Convertir texto a número
+
+```js
+function textoANumero(texto) {
+  return parseInt(texto);
+}
+```
+
+---
+
+## 1️⃣1️⃣ Comprobar si un número es par
+
+```js
+function esPar(n) {
+  if (n % 2 === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+```
+
+---
+
+## 1️⃣2️⃣ Contar elementos de un array
+
+```js
+function contar(array) {
+  return array.length;
+}
+```
+
+---
+
+## 1️⃣3️⃣ Mostrar array por consola
+
+```js
+function mostrarArray(array) {
+  for (let i = 0; i < array.length; i++) {
+    console.log(array[i]);
+  }
+}
+```
+
+---
+
+## 1️⃣4️⃣ Añadir elemento a un array
+
+```js
+function agregar(array, elemento) {
+  array.push(elemento);
+}
+```
+
+---
+
+## 1️⃣5️⃣ Mostrar hora actual
+
+```js
+function mostrarHora() {
+  let ahora = new Date();
+  alert(ahora.getHours() + ":" + ahora.getMinutes());
+}
+```
+
+---
+
+## 1️⃣6️⃣ Confirmar acción
+
+```js
+function confirmarAccion() {
+  return confirm("¿Estás seguro?");
+}
+```
+
+---
+
+## 1️⃣7️⃣ Comprobar texto no vacío
+
+```js
+function noVacio(texto) {
+  if (texto === "") {
+    return false;
+  } else {
+    return true;
+  }
+}
+```
+
+---
+
+## 1️⃣8️⃣ Calcular media de dos números
+
+```js
+function media(a, b) {
+  return (a + b) / 2;
+}
+```
+
+---
+
+## 1️⃣9️⃣ Cambiar imagen
+
+```js
+function cambiarImagen(idImg, ruta) {
+  document.getElementById(idImg).src = ruta;
+}
+```
+
+---
+
+## 2️⃣0️⃣ Multiplicar (función flecha)
+
+```js
+const multiplicar = (a, b) => a * b;
+```
+
+---
+
+## 🧠 Cómo te lo pueden pedir en el examen (plantilla mental)
+
+Si te dicen:
+
+> “Crea una función que…”
+
+Piensa siempre en este molde:
+
+```js
+function nombreFuncion(parametros) {
+  // qué hace
+  return resultado; // si tiene que devolver algo
+}
+```
+
+---
+

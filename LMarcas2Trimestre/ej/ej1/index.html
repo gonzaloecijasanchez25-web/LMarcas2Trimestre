@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Título discreto -->
+  <title>Galería de perritos</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <h1 id="titulo-principal">Galería de perritos 🐶</h1>
+    <p class="destacado">
+      Un paseíto por fotos adorables (y de paso, un poquito de magia del navegador).
+    </p>
+  </header>
+
+  <main>
+    <!-- 1) Carrusel -->
+    <section>
+      <h2>Fotos destacadas</h2>
+
+      <div class="carrusel">
+        <img id="imgCarrusel" src="img1.jpg" alt="Perrito 1">
+      </div>
+
+      <p class="nota">
+        📌 Pon 3 imágenes en esta carpeta: <strong>img1.jpg</strong>, <strong>img2.jpg</strong>, <strong>img3.jpg</strong>.
+      </p>
+    </section>
+
+    <hr>
+
+    <!-- 2) Cambiar texto -->
+    <section>
+      <h2>Mensaje del día</h2>
+      <p id="mensaje">Hoy toca paseo y siesta.</p>
+      <button id="btnCambiarTexto">Cambiar mensaje</button>
+    </section>
+
+    <hr>
+
+    <!-- 3) Cambiar estilos -->
+    <section>
+      <h2>Modo “emocionado”</h2>
+      <p id="textoColor">¡Guau guau! (esto puede cambiar de estilo)</p>
+      <button id="btnCambiarEstilo">Activar emoción</button>
+    </section>
+
+    <hr>
+
+    <!-- 4) Interacción -->
+    <section>
+      <h2>Encuesta rápida</h2>
+      <button id="btnAlert">Saludo</button>
+      <button id="btnConfirm">¿Te gustan los perritos?</button>
+      <button id="btnPrompt">Dime un nombre</button>
+
+      <p id="resultadoInteraccion">Aquí aparecerá tu respuesta.</p>
+    </section>
+
+    <hr>
+
+    <!-- 5) Lista + consola -->
+    <section>
+      <h2>Razas (lista interna)</h2>
+      <button id="btnVerLista">Ver razas (en consola)</button>
+      <p class="nota">
+        📌 Se ve en consola del navegador: F12 → Console
+      </p>
+    </section>
+
+    <hr>
+
+    <!-- 6) Hora -->
+    <section>
+      <h2>Hora del paseo</h2>
+      <button id="btnHora">Ver hora</button>
+      <p id="horaActual">Aquí aparecerá la hora.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p><small>&copy; Galería de perritos</small></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

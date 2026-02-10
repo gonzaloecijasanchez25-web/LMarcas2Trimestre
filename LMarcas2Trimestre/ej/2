@@ -1,0 +1,314 @@
+Perfecto. Aquí tienes **20 ejemplos de funciones en JavaScript**, **ultra básicas**, todas dentro del nivel de tus apuntes, y para cada una te explico:
+**qué hace**, **cómo funciona** y **qué espera (parámetros)**. Esto es oro para pillar el concepto de “función” de una vez.
+
+> Piensa en una función como: *“una mini-máquina que le das algo, hace algo, y a veces te devuelve un resultado”*.
+
+---
+
+## 1️⃣ Saludar
+
+```js
+function saludar() {
+  alert("¡Hola!");
+}
+```
+
+**Qué hace:** muestra un mensaje.
+**Cómo funciona:** ejecuta `alert()` al llamarla.
+**Qué espera:** nada.
+
+---
+
+## 2️⃣ Saludar con nombre
+
+```js
+function saludarNombre(nombre) {
+  alert("Hola, " + nombre);
+}
+```
+
+**Qué hace:** saluda a la persona.
+**Cómo funciona:** concatena texto + variable.
+**Qué espera:** `nombre` (texto).
+
+---
+
+## 3️⃣ Sumar dos números
+
+```js
+function sumar(a, b) {
+  return a + b;
+}
+```
+
+**Qué hace:** suma dos números.
+**Cómo funciona:** devuelve el resultado con `return`.
+**Qué espera:** `a` y `b` (números).
+
+---
+
+## 4️⃣ Restar dos números
+
+```js
+function restar(a, b) {
+  return a - b;
+}
+```
+
+**Qué hace:** resta.
+**Cómo funciona:** operación aritmética.
+**Qué espera:** dos números.
+
+---
+
+## 5️⃣ Comprobar si es mayor de edad
+
+```js
+function esMayorDeEdad(edad) {
+  if (edad >= 18) {
+    return true;
+  } else {
+    return false;
+  }
+}
+```
+
+**Qué hace:** dice si alguien es mayor de edad.
+**Cómo funciona:** `if/else`.
+**Qué espera:** `edad` (número).
+
+---
+
+## 6️⃣ Cambiar texto de un elemento
+
+```js
+function cambiarTextoElemento(id, texto) {
+  document.getElementById(id).textContent = texto;
+}
+```
+
+**Qué hace:** cambia el texto de un elemento HTML.
+**Cómo funciona:** DOM + `textContent`.
+**Qué espera:** `id` del elemento y `texto`.
+
+---
+
+## 7️⃣ Cambiar color de un elemento
+
+```js
+function cambiarColor(id, color) {
+  document.getElementById(id).style.color = color;
+}
+```
+
+**Qué hace:** cambia el color del texto.
+**Cómo funciona:** accede al `style`.
+**Qué espera:** `id` del elemento y `color` (texto: `"red"`, `"blue"`).
+
+---
+
+## 8️⃣ Mostrar lo que escribe el usuario
+
+```js
+function mostrarEnConsola(texto) {
+  console.log(texto);
+}
+```
+
+**Qué hace:** imprime en consola.
+**Cómo funciona:** usa `console.log`.
+**Qué espera:** cualquier valor.
+
+---
+
+## 9️⃣ Pedir nombre al usuario
+
+```js
+function pedirNombre() {
+  let nombre = prompt("¿Cómo te llamas?");
+  alert("Hola, " + nombre);
+}
+```
+
+**Qué hace:** pide nombre y saluda.
+**Cómo funciona:** `prompt()` + `alert()`.
+**Qué espera:** nada (el usuario escribe).
+
+---
+
+## 🔟 Convertir texto a número
+
+```js
+function textoANumero(texto) {
+  return parseInt(texto);
+}
+```
+
+**Qué hace:** convierte string en número.
+**Cómo funciona:** `parseInt()`.
+**Qué espera:** `texto` (string).
+
+---
+
+## 1️⃣1️⃣ Ver si un número es par
+
+```js
+function esPar(numero) {
+  if (numero % 2 === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+```
+
+**Qué hace:** comprueba si es par.
+**Cómo funciona:** resto `%`.
+**Qué espera:** un número.
+
+---
+
+## 1️⃣2️⃣ Contar elementos de un array
+
+```js
+function contarElementos(array) {
+  return array.length;
+}
+```
+
+**Qué hace:** devuelve cuántos elementos hay.
+**Cómo funciona:** propiedad `.length`.
+**Qué espera:** un array.
+
+---
+
+## 1️⃣3️⃣ Recorrer un array y mostrarlo
+
+```js
+function mostrarArray(array) {
+  for (let i = 0; i < array.length; i++) {
+    console.log(array[i]);
+  }
+}
+```
+
+**Qué hace:** muestra cada elemento.
+**Cómo funciona:** bucle `for`.
+**Qué espera:** un array.
+
+---
+
+## 1️⃣4️⃣ Añadir elemento a un array
+
+```js
+function agregarElemento(array, elemento) {
+  array.push(elemento);
+}
+```
+
+**Qué hace:** añade un elemento al final.
+**Cómo funciona:** método `push()`.
+**Qué espera:** array y el elemento.
+
+---
+
+## 1️⃣5️⃣ Mostrar hora actual
+
+```js
+function mostrarHora() {
+  let ahora = new Date();
+  alert("Hora: " + ahora.getHours() + ":" + ahora.getMinutes());
+}
+```
+
+**Qué hace:** muestra la hora.
+**Cómo funciona:** objeto `Date`.
+**Qué espera:** nada.
+
+---
+
+## 1️⃣6️⃣ Confirmar acción
+
+```js
+function confirmarAccion() {
+  let ok = confirm("¿Estás seguro?");
+  return ok;
+}
+```
+
+**Qué hace:** pregunta sí/no.
+**Cómo funciona:** `confirm()`.
+**Qué espera:** nada (devuelve true/false).
+
+---
+
+## 1️⃣7️⃣ Validar texto no vacío
+
+```js
+function noVacio(texto) {
+  if (texto === "") {
+    return false;
+  } else {
+    return true;
+  }
+}
+```
+
+**Qué hace:** comprueba si hay texto.
+**Cómo funciona:** comparación.
+**Qué espera:** texto.
+
+---
+
+## 1️⃣8️⃣ Calcular media
+
+```js
+function media(a, b) {
+  return (a + b) / 2;
+}
+```
+
+**Qué hace:** calcula la media.
+**Cómo funciona:** suma + divide.
+**Qué espera:** dos números.
+
+---
+
+## 1️⃣9️⃣ Cambiar imagen
+
+```js
+function cambiarImagen(idImg, nuevaRuta) {
+  document.getElementById(idImg).src = nuevaRuta;
+}
+```
+
+**Qué hace:** cambia una imagen.
+**Cómo funciona:** cambia `src` del `<img>`.
+**Qué espera:** id de la imagen y ruta.
+
+---
+
+## 2️⃣0️⃣ Función flecha básica
+
+```js
+const multiplicar = (a, b) => a * b;
+```
+
+**Qué hace:** multiplica dos números.
+**Cómo funciona:** arrow function con `return` implícito.
+**Qué espera:** dos números.
+
+---
+
+### 💡 Cómo estudiarlas rápido (truco mental)
+
+Para cada función pregúntate siempre:
+
+1. **¿Qué entra?** (parámetros)
+2. **¿Qué hace dentro?** (código)
+3. **¿Devuelve algo o solo ejecuta?** (`return` o no)
+
+Si quieres, en el siguiente mensaje te hago **20 mini-ejercicios tipo examen** del estilo:
+
+> “Escribe una función que…”
+> y luego te doy la solución para practicar como un campeón.

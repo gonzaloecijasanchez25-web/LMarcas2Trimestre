@@ -1,0 +1,236 @@
+Estructura básica
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<body>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+
+Texto y estructura
+
+<h1> a <h6> → títulos
+
+<p> → párrafo
+
+<br> → salto de línea
+
+<hr> → línea separadora
+
+Enlaces e imágenes
+
+<a href="..."> → enlace
+
+<img src="..." alt="..."> → imagen (siempre con alt)
+
+Listas
+
+<ul>, <ol>, <li>
+
+<dl>, <dt>, <dd>
+
+Contenedores
+
+<div> (bloque)
+
+<span> (en línea)
+
+Formularios (básico)
+
+<form>
+
+<input> (text, number, email, password, checkbox, radio)
+
+<textarea>
+
+<select>, <option>
+
+<button>
+
+<label>
+
+Semánticas (HTML5)
+
+<header>
+
+<nav>
+
+<main>
+
+<section>
+
+<article>
+
+<aside>
+
+<footer>
+
+Enlazar archivos
+
+<link rel="stylesheet" href="styles.css">
+
+<script src="script.js"></script>
+
+🎨 CHULETA RÁPIDA – CSS (lo mínimo vital)
+
+(Aunque no te lo expliquen a fondo, esto es lo que más se usa)
+
+Seleccionar por etiqueta
+
+p { ... }
+
+div { ... }
+
+Seleccionar por id
+
+#miId { ... }
+
+Seleccionar por clase
+
+.miClase { ... }
+
+Propiedades típicas
+
+color
+
+background-color
+
+font-size
+
+font-weight
+
+margin
+
+padding
+
+border
+
+width, height
+
+Ejemplo mínimo
+
+#titulo { color: red; }
+.texto { font-size: 20px; }
+
+⚙️ CHULETA RÁPIDA – JAVASCRIPT (la artillería básica)
+
+Variables
+
+let → puede cambiar
+
+const → no cambia
+
+var → evitar
+
+Tipos y utilidades
+
+typeof
+
+parseInt()
+
+isNaN()
+
+Condicionales
+
+if (...) { ... } else { ... }
+
+switch (...) { case ...; break; default: ... }
+
+Bucles
+
+for (let i = 0; i < x; i++) { ... }
+
+while (...) { ... }
+
+do { ... } while (...);
+
+Funciones
+
+function miFuncion() { ... }
+
+return
+
+() => { ... } (arrow function)
+
+DOM (tocar HTML desde JS)
+
+document.getElementById("id")
+
+document.querySelector("selector")
+
+document.querySelectorAll("selector")
+
+element.textContent = "texto"
+
+element.innerHTML = "<strong>html</strong>"
+
+element.style.color = "red"
+
+Eventos
+
+addEventListener("click", funcion)
+
+Eventos comunes: click, keyup, submit, mouseover
+
+Interacción
+
+alert("mensaje")
+
+confirm("mensaje")
+
+prompt("mensaje")
+
+Arrays
+
+let arr = []
+
+arr.push()
+
+arr.pop()
+
+arr.length
+
+arr.forEach(...)
+
+Objetos
+
+let obj = { clave: valor }
+
+class MiClase { constructor() {} }
+
+Fechas
+
+new Date()
+
+getHours(), getMinutes(), getFullYear()
+
+Consola (debug)
+
+console.log()
+
+console.warn()
+
+console.error()
+
+console.table()
+
+🧩 Mini-chuleta de errores típicos (para no liarla en el examen)
+
+No olvidar <!DOCTYPE html>
+
+Siempre alt en <img>
+
+Cerrar etiquetas HTML
+
+Usar === en lugar de ==
+
+Convertir prompt() a número con parseInt()
+
+No usar var

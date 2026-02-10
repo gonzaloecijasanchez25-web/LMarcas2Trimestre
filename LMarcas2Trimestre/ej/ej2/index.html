@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de paseos</title>
+
+  <!-- CSS opcional (si no quieres, bórralo y ya) -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>Registro de paseos 🐾</h1>
+    <p>Apunta paseos y mira un resumen.</p>
+  </header>
+
+  <main>
+    <!-- FORMULARIO SENCILLO (solo HTML básico) -->
+    <section>
+      <h2>Nuevo paseo</h2>
+
+      <!-- Campo de texto -->
+      <label for="nombre">Nombre del perrito:</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Ej: Toby">
+
+      <br><br>
+
+      <!-- Campo numérico -->
+      <label for="minutos">Minutos de paseo:</label>
+      <input type="number" id="minutos" name="minutos" min="1" max="300" placeholder="Ej: 30">
+
+      <br><br>
+
+      <!-- Select -->
+      <label for="humor">¿Cómo ha ido?</label>
+      <select id="humor" name="humor">
+        <option value="bien">Bien</option>
+        <option value="normal">Normal</option>
+        <option value="mal">Mal</option>
+      </select>
+
+      <br><br>
+
+      <!-- Botones -->
+      <button id="btnAgregar">Agregar paseo</button>
+      <button id="btnResumen">Ver resumen</button>
+      <button id="btnLimpiar">Limpiar lista</button>
+    </section>
+
+    <hr>
+
+    <!-- ZONA DE SALIDA -->
+    <section>
+      <h2>Lista de paseos</h2>
+      <p id="estado">Aún no hay paseos registrados.</p>
+
+      <!-- Aquí JS mete el contenido -->
+      <div id="lista"></div>
+
+      <hr>
+
+      <h2>Resumen</h2>
+      <p id="resumen">Pulsa “Ver resumen”.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p><small>&copy; Registro de paseos</small></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
